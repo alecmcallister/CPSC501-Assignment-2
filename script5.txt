@@ -2,5 +2,5 @@
 Filename: script5.txt
 Running Test: ClassD
 Recursive: true
-Nothing happens here yet.
+Declaring Class: None
 ======================================================

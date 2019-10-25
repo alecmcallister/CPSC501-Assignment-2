@@ -9,9 +9,30 @@ public class Inspector {
 	}
 
 	private void inspectClass(Class c, Object obj, boolean recursive, int depth) {
+		println(getDeclaringClass(c));
+	}
 
-		System.out.println("Nothing happens here yet.");
+	private String getDeclaringClass(Class c) {
+		String result = "Declaring Class: ";
 
+		if (c == null)
+			result = "null";
+
+		else if (c.getDeclaringClass() == null)
+			result += "None";
+
+		else
+			result += c.getDeclaringClass().getSimpleName();
+
+		return result;
+	}
+
+	private void print(Object arg) {
+		System.out.print(arg);
+	}
+
+	private void println(Object arg) {
+		System.out.println(arg);
 	}
 
 }

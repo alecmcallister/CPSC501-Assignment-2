@@ -2,5 +2,5 @@
 Filename: script8.txt
 Running Test: Test String
 Recursive: true
-Nothing happens here yet.
+Declaring Class: None
 ======================================================
