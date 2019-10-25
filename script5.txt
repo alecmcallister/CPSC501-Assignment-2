@@ -2,5 +2,11 @@
 Filename: script5.txt
 Running Test: ClassD
 Recursive: true
-Declaring Class: None
+
+InspectClass: ClassD
+ Declaring Class: [N/A]
+ Super-Class: Object
+	InspectClass: Object
+	 Declaring Class: [N/A]
+	 Super-Class: [N/A]
 ======================================================

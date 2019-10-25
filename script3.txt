@@ -2,5 +2,29 @@
 Filename: script3.txt
 Running Test: ClassB
 Recursive: true
-Declaring Class: None
+
+InspectClass: ClassB
+ Declaring Class: [N/A]
+ Super-Class: ClassC
+	InspectClass: ClassC
+	 Declaring Class: [N/A]
+	 Super-Class: ClassD
+		InspectClass: ClassD
+		 Declaring Class: [N/A]
+		 Super-Class: Object
+			InspectClass: Object
+			 Declaring Class: [N/A]
+			 Super-Class: [N/A]
+	 Interface: InterfaceA
+		InspectClass: InterfaceA
+		 Declaring Class: [N/A]
+		 Super-Class: [N/A]
+		 Interface: InterfaceB
+			InspectClass: InterfaceB
+			 Declaring Class: [N/A]
+			 Super-Class: [N/A]
+ Interface: Runnable
+	InspectClass: Runnable
+	 Declaring Class: [N/A]
+	 Super-Class: [N/A]
 ======================================================

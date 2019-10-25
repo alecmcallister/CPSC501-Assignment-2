@@ -2,5 +2,19 @@
 Filename: script6.txt
 Running Test: [LClassB;@15db9742
 Recursive: true
-Declaring Class: None
+
+InspectClass: ClassB[]
+ Declaring Class: [N/A]
+ Super-Class: Object
+	InspectClass: Object
+	 Declaring Class: [N/A]
+	 Super-Class: [N/A]
+ Interface: Cloneable
+	InspectClass: Cloneable
+	 Declaring Class: [N/A]
+	 Super-Class: [N/A]
+ Interface: Serializable
+	InspectClass: Serializable
+	 Declaring Class: [N/A]
+	 Super-Class: [N/A]
 ======================================================

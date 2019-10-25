@@ -2,5 +2,19 @@
 Filename: script2.txt
 Running Test: ClassA
 Recursive: true
-Declaring Class: None
+
+InspectClass: ClassA
+ Declaring Class: [N/A]
+ Super-Class: Object
+	InspectClass: Object
+	 Declaring Class: [N/A]
+	 Super-Class: [N/A]
+ Interface: Serializable
+	InspectClass: Serializable
+	 Declaring Class: [N/A]
+	 Super-Class: [N/A]
+ Interface: Runnable
+	InspectClass: Runnable
+	 Declaring Class: [N/A]
+	 Super-Class: [N/A]
 ======================================================

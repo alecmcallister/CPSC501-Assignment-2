@@ -2,5 +2,23 @@
 Filename: script8.txt
 Running Test: Test String
 Recursive: true
-Declaring Class: None
+
+InspectClass: String
+ Declaring Class: [N/A]
+ Super-Class: Object
+	InspectClass: Object
+	 Declaring Class: [N/A]
+	 Super-Class: [N/A]
+ Interface: Serializable
+	InspectClass: Serializable
+	 Declaring Class: [N/A]
+	 Super-Class: [N/A]
+ Interface: Comparable
+	InspectClass: Comparable
+	 Declaring Class: [N/A]
+	 Super-Class: [N/A]
+ Interface: CharSequence
+	InspectClass: CharSequence
+	 Declaring Class: [N/A]
+	 Super-Class: [N/A]
 ======================================================
