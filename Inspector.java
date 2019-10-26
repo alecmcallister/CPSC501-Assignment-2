@@ -179,7 +179,7 @@ public class Inspector {
 		return (c != null) ? c.getName() : "[N/A]";
 	}
 
-	private String getIndent(int depth) {
+	public String getIndent(int depth) {
 		String indent = "";
 		for (int i = 0; i < depth; i++)
 			indent += "\t";
@@ -187,7 +187,7 @@ public class Inspector {
 		return indent;
 	}
 
-	private String getArrayContents(Object a) {
+	public String getArrayContents(Object a) {
 		if (!a.getClass().isArray())
 			return "";
 
@@ -200,7 +200,7 @@ public class Inspector {
 		return result;
 	}
 
-	private String separateListWithCommas(Class[] list) {
+	public String separateListWithCommas(Class[] list) {
 		String result = "";
 		for (int i = 0; i < list.length; i++)
 			result += getClassName(list[i]) + (i + 1 == list.length ? "" : ", ");
