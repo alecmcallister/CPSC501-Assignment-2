@@ -1,6 +1,6 @@
 ======================================================
 Filename: script6.txt
-Running Test: [LClassB;@15db9742
+Running Test: [LClassB;@42a57993
 Recursive: true
 
 InspectClass: ClassB[]
@@ -9,16 +9,35 @@ InspectClass: ClassB[]
 	InspectClass: Object
 	 Declaring Class: [N/A]
 	 Super-Class: [N/A]
-	 Constructor: public java.lang.Object()
+	 Constructors: 
+	 public java.lang.Object()
+
+	 Declared Methods: 
+	 protected void finalize() throws Throwable
+	 public final void wait() throws InterruptedException
+	 public final void wait(long, int) throws InterruptedException
+	 public final native void wait(long) throws InterruptedException
+	 public boolean equals(Object)
+	 public String toString()
+	 public native int hashCode()
+	 public final native Class getClass()
+	 protected native Object clone() throws CloneNotSupportedException
+	 public final native void notify()
+	 public final native void notifyAll()
+	 private static native void registerNatives()
+
  Interface: Cloneable
 	InspectClass: Cloneable
 	 Declaring Class: [N/A]
 	 Super-Class: [N/A]
-	 Constructor: [N/A]
+	 Constructors: [N/A]
+	 Declared Methods: [N/A]
  Interface: Serializable
 	InspectClass: Serializable
 	 Declaring Class: [N/A]
 	 Super-Class: [N/A]
-	 Constructor: [N/A]
- Constructor: [N/A]
+	 Constructors: [N/A]
+	 Declared Methods: [N/A]
+ Constructors: [N/A]
+ Declared Methods: [N/A]
 ======================================================

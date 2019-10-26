@@ -18,6 +18,8 @@ public class Inspector {
 		printInterface(c, recursive, depth);
 
 		printConstructors(c, recursive, depth);
+
+		printMethods(c, recursive, depth);
 	}
 
 	private void printDeclaringClass(Class c, boolean recursive, int depth) {
@@ -40,12 +42,27 @@ public class Inspector {
 	}
 
 	private void printConstructors(Class c, boolean recursive, int depth) {
-		if (c.getConstructors().length == 0)
-			println(getIndent(depth) + " Constructor: [N/A]");
-			
+		println(getIndent(depth) + " Constructors: "
+				+ ((c.getConstructors().length == 0) ? "[N/A]" : ""));
+
 		for (Constructor con : c.getConstructors()) {
-			println(getIndent(depth) + " " + getConstructorInfo(con));
+			println(getIndent(depth) + getConstructorInfo(con));
 		}
+
+		if (c.getConstructors().length != 0)
+			println("");
+	}
+
+	private void printMethods(Class c, boolean recursive, int depth) {
+		println(getIndent(depth) + " Declared Methods: "
+				+ ((c.getDeclaredMethods().length == 0) ? "[N/A]" : ""));
+
+		for (Method m : c.getDeclaredMethods()) {
+			println(getIndent(depth) + getMethdInfo(m));
+		}
+
+		if (c.getDeclaredMethods().length != 0)
+			println("");
 	}
 
 	private String getClassName(Class c) {
@@ -54,17 +71,45 @@ public class Inspector {
 	}
 
 	private String getConstructorInfo(Constructor con) {
-		String result = "Constructor: ";
+		String result = " ";
 
 		result += Modifier.toString(con.getModifiers());
 		result += " " + con.getName() + "(";
 
 		for (int i = 0; i < con.getParameterCount(); i++) {
 			Parameter p = con.getParameters()[i];
-			result += p.getType() + ((i + 1 == con.getParameterCount()) ? "" : ", ");
+			result += getClassName(p.getType()) + ((i + 1 == con.getParameterCount()) ? "" : ", ");
 		}
 
 		result += ")";
+
+		return result;
+	}
+
+	private String getMethdInfo(Method m) {
+		String result = " ";
+
+		result += Modifier.toString(m.getModifiers());
+		result += " " + getClassName(m.getReturnType());
+		result += " " + m.getName() + "(";
+
+		for (int i = 0; i < m.getParameterCount(); i++) {
+			Parameter p = m.getParameters()[i];
+			result += getClassName(p.getType()) + (i + 1 == m.getParameterCount() ? "" : ", ");
+		}
+
+		result += ")";
+
+		if (m.getExceptionTypes().length > 0)
+		{
+			result += " throws ";
+
+			for (int i = 0; i < m.getExceptionTypes().length; i++)
+			{
+				Class e = m.getExceptionTypes()[i];
+				result += getClassName(e) + (i + 1 == m.getExceptionTypes().length ? "" : ", ");
+			}
+		}
 
 		return result;
 	}
