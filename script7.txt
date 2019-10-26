@@ -1,45 +1,54 @@
 ======================================================
 Filename: script7.txt
-Running Test: [[LClassB;@135fbaa4
+Running Test: [[LClassB;@45ee12a7
 Recursive: true
 
-InspectClass: ClassB[][]
+
+[[LClassB;
+(Length: 12) [[LClassB;@330bedb4, [LClassB;@2503dbd3, [LClassB;@4b67cf4d, [LClassB;@7ea987ac, [LClassB;@12a3a380, [LClassB;@29453f44, [LClassB;@5cad8086, [LClassB;@6e0be858, [LClassB;@61bbe9ba, [LClassB;@610455d6, [LClassB;@511d50c0, [LClassB;@60e53b93]
  Declaring Class: [N/A]
- Super-Class: Object
-	InspectClass: Object
-	 Declaring Class: [N/A]
+ Super-Class: java.lang.Object
+
+	java.lang.Object
+	 Declaring Class: java.lang.Object
 	 Super-Class: [N/A]
 	 Constructors: 
 	 - public java.lang.Object()
 	 Declared Methods: 
-	 - protected void finalize() throws Throwable
-	 - public final void wait() throws InterruptedException
-	 - public final void wait(long, int) throws InterruptedException
-	 - public final native void wait(long) throws InterruptedException
-	 - public boolean equals(Object)
-	 - public String toString()
+	 - protected void finalize() throws java.lang.Throwable
+	 - public final void wait() throws java.lang.InterruptedException
+	 - public final void wait(long, int) throws java.lang.InterruptedException
+	 - public final native void wait(long) throws java.lang.InterruptedException
+	 - public boolean equals(java.lang.Object)
+	 - public java.lang.String toString()
 	 - public native int hashCode()
-	 - public final native Class getClass()
-	 - protected native Object clone() throws CloneNotSupportedException
+	 - public final native java.lang.Class getClass()
+	 - protected native java.lang.Object clone() throws java.lang.CloneNotSupportedException
 	 - public final native void notify()
 	 - public final native void notifyAll()
 	 - private static native void registerNatives()
 	 Declared Fields: [N/A]
- Interface: Cloneable
-	InspectClass: Cloneable
+
+ Interface: java.lang.Cloneable
+
+	java.lang.Cloneable
 	 Declaring Class: [N/A]
 	 Super-Class: [N/A]
 	 Constructors: [N/A]
 	 Declared Methods: [N/A]
 	 Declared Fields: [N/A]
- Interface: Serializable
-	InspectClass: Serializable
+
+ Interface: java.io.Serializable
+
+	java.io.Serializable
 	 Declaring Class: [N/A]
 	 Super-Class: [N/A]
 	 Constructors: [N/A]
 	 Declared Methods: [N/A]
 	 Declared Fields: [N/A]
+
  Constructors: [N/A]
  Declared Methods: [N/A]
  Declared Fields: [N/A]
+
 ======================================================

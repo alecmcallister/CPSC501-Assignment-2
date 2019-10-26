@@ -1,45 +1,54 @@
 ======================================================
 Filename: script6.txt
-Running Test: [LClassB;@14ae5a5
+Running Test: [LClassB;@6d6f6e28
 Recursive: true
 
-InspectClass: ClassB[]
+
+[LClassB;
+(Length: 12) [null, null, null, null, null, null, null, null, null, null, null, null]
  Declaring Class: [N/A]
- Super-Class: Object
-	InspectClass: Object
-	 Declaring Class: [N/A]
+ Super-Class: java.lang.Object
+
+	java.lang.Object
+	 Declaring Class: java.lang.Object
 	 Super-Class: [N/A]
 	 Constructors: 
 	 - public java.lang.Object()
 	 Declared Methods: 
-	 - protected void finalize() throws Throwable
-	 - public final void wait() throws InterruptedException
-	 - public final void wait(long, int) throws InterruptedException
-	 - public final native void wait(long) throws InterruptedException
-	 - public boolean equals(Object)
-	 - public String toString()
+	 - protected void finalize() throws java.lang.Throwable
+	 - public final void wait() throws java.lang.InterruptedException
+	 - public final void wait(long, int) throws java.lang.InterruptedException
+	 - public final native void wait(long) throws java.lang.InterruptedException
+	 - public boolean equals(java.lang.Object)
+	 - public java.lang.String toString()
 	 - public native int hashCode()
-	 - public final native Class getClass()
-	 - protected native Object clone() throws CloneNotSupportedException
+	 - public final native java.lang.Class getClass()
+	 - protected native java.lang.Object clone() throws java.lang.CloneNotSupportedException
 	 - public final native void notify()
 	 - public final native void notifyAll()
 	 - private static native void registerNatives()
 	 Declared Fields: [N/A]
- Interface: Cloneable
-	InspectClass: Cloneable
+
+ Interface: java.lang.Cloneable
+
+	java.lang.Cloneable
 	 Declaring Class: [N/A]
 	 Super-Class: [N/A]
 	 Constructors: [N/A]
 	 Declared Methods: [N/A]
 	 Declared Fields: [N/A]
- Interface: Serializable
-	InspectClass: Serializable
+
+ Interface: java.io.Serializable
+
+	java.io.Serializable
 	 Declaring Class: [N/A]
 	 Super-Class: [N/A]
 	 Constructors: [N/A]
 	 Declared Methods: [N/A]
 	 Declared Fields: [N/A]
+
  Constructors: [N/A]
  Declared Methods: [N/A]
  Declared Fields: [N/A]
+
 ======================================================

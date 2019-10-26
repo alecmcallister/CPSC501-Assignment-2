@@ -3,7 +3,6 @@ import java.lang.reflect.*;
 
 public class Inspector {
 
-
 	public void inspect(Object obj, boolean recursive) {
 		println("");
 		inspectClass(new InspectObj(obj.getClass(), obj, recursive, 0));
@@ -14,13 +13,26 @@ public class Inspector {
 	}
 
 	private void inspectClass(InspectObj o) {
-		// TODO: Implement array check
+		if (o == null || o.obj == null || o.c == null)
+			return;
+
+		println("\n" + getIndent(o.depth) + getClassName(o.c));
 
 		if (o.c.isArray()) {
+			println(getIndent(o.depth) + getArrayContents(o.obj));
 
+			// Don't think this is what the assignment is asking for...
+			// Goes into an infinite loop while doing script8
+
+			// if (o.recursive) {
+			// for (int i = 0; i < Array.getLength(o.obj); i++) {
+			// Object objectAtIndex = Array.get(o.obj, i);
+			// if (objectAtIndex != null)
+			// inspectClass(objectAtIndex.getClass(), objectAtIndex, o.recursive,
+			// o.depth + 1);
+			// }
+			// }
 		}
-
-		println(getIndent(o.depth) + "InspectClass: " + getClassName(o.c));
 
 		printDeclaringClass(o);
 
@@ -33,11 +45,17 @@ public class Inspector {
 		printMethods(o);
 
 		printFields(o);
+
+		println("");
 	}
 
 
+
 	private void printDeclaringClass(InspectObj o) {
-		println(getIndent(o.depth) + " Declaring Class: " + getClassName(o.c.getDeclaringClass()));
+		println(getIndent(o.depth) + " Declaring Class: "
+				+ getClassName((o.c.getConstructors().length > 0)
+						? o.c.getConstructors()[0].getDeclaringClass()
+						: o.c.getDeclaringClass()));
 	}
 
 	private void printSuperClass(InspectObj o) {
@@ -127,6 +145,12 @@ public class Inspector {
 
 		for (Field f : o.c.getDeclaredFields()) {
 			println(getIndent(o.depth) + getFieldInfo(o, f));
+
+			if (!f.getType().isPrimitive() && o.recursive) {
+				Object value = getFieldValue(o, f);
+				if (value != null)
+					inspectClass(f.getType(), value, o.recursive, o.depth + 1);
+			}
 		}
 	}
 
@@ -137,39 +161,39 @@ public class Inspector {
 		result += " " + getClassName(f.getType());
 		result += " " + f.getName() + " = ";
 
-		Object ooo = null;
+		Object value = getFieldValue(o, f);
 
-		try {
-			f.setAccessible(true);
-			ooo = f.get(o.obj);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-
-		if (ooo == null)
-			return result + ooo;
+		if (value == null)
+			return result + value;
 
 		if (f.getType().isPrimitive()) {
-			result += ooo;
+			result += value;
 		} else {
-			result += getClassName(ooo.getClass()) + "@" + Integer.toHexString(ooo.hashCode());
+			result += getIdentityHash(value);
 		}
 
 		if (f.getType().isArray()) {
-			result += " " + getArrayContents(ooo);
+			result += " " + getArrayContents(value);
 		}
 
-		// TODO: Add recursive inspection
-
 		return result;
+	}
+
+	private Object getFieldValue(InspectObj o, Field f) {
+		Object value = null;
+		try {
+			f.setAccessible(true);
+			value = f.get(o.obj);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return value;
 	}
 
 
 
 	private String getClassName(Class c) {
-		// May want to change to descriptive name at some point
-		// return (c != null) ? c.getName() : "[N/A]";
-		return (c != null) ? c.getSimpleName() : "[N/A]";
+		return (c != null) ? c.getName() : "[N/A]";
 	}
 
 	private String getIndent(int depth) {
@@ -183,13 +207,17 @@ public class Inspector {
 		if (!a.getClass().isArray())
 			return "";
 
-		String result = "[";
+		String result = "(Length: " + Array.getLength(a) + ") [";
 		for (int i = 0; i < Array.getLength(a); i++) {
 			result += Array.get(a, i) + (i + 1 < Array.getLength(a) ? ", " : "");
 		}
 		result += "]";
 
 		return result;
+	}
+
+	private String getIdentityHash(Object o) {
+		return getClassName(o.getClass()) + "@" + Integer.toHexString(o.hashCode());
 	}
 
 	private void print(Object arg) {
@@ -203,9 +231,6 @@ public class Inspector {
 
 
 	public class InspectObj {
-
-		// Don't care about access right now.
-		// Ideally these would be private fields with get/ set, but I'm too lazy...
 		public Class c;
 		public Object obj;
 		public boolean recursive;
