@@ -65,10 +65,10 @@ InspectClass: ClassB
 	 Declared Methods: 
 	 - public void run()
 	 - public String toString()
-	 - public void func1(int, double, boolean, String) throws Exception
 	 - public abstract void func3(int)
-	 - public int func2(String) throws Exception, ArithmeticException, IllegalMonitorStateException
 	 - public void func0(int, boolean) throws Exception
+	 - public void func1(int, double, boolean, String) throws Exception
+	 - public int func2(String) throws Exception, ArithmeticException, IllegalMonitorStateException
 	 Declared Fields: 
 	 - private ClassA val2 = ClassA@6bc7c054
 	 - private ClassA val3 = ClassA@232204a1

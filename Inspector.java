@@ -16,6 +16,10 @@ public class Inspector {
 	private void inspectClass(InspectObj o) {
 		// TODO: Implement array check
 
+		if (o.c.isArray()) {
+
+		}
+
 		println(getIndent(o.depth) + "InspectClass: " + getClassName(o.c));
 
 		printDeclaringClass(o);
@@ -152,11 +156,7 @@ public class Inspector {
 		}
 
 		if (f.getType().isArray()) {
-			result += " [";
-			for (int i = 0; i < Array.getLength(ooo); i++) {
-				result += Array.get(ooo, i) + (i + 1 < Array.getLength(ooo) ? ", " : "");
-			}
-			result += "]";
+			result += " " + getArrayContents(ooo);
 		}
 
 		// TODO: Add recursive inspection
@@ -177,6 +177,19 @@ public class Inspector {
 		for (int i = 0; i < depth; i++)
 			indent += "\t";
 		return indent;
+	}
+
+	private String getArrayContents(Object a) {
+		if (!a.getClass().isArray())
+			return "";
+
+		String result = "[";
+		for (int i = 0; i < Array.getLength(a); i++) {
+			result += Array.get(a, i) + (i + 1 < Array.getLength(a) ? ", " : "");
+		}
+		result += "]";
+
+		return result;
 	}
 
 	private void print(Object arg) {
