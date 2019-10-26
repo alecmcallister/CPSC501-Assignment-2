@@ -9,12 +9,17 @@ InspectClass: ClassA
 	InspectClass: Object
 	 Declaring Class: [N/A]
 	 Super-Class: [N/A]
+	 Constructor: public java.lang.Object()
  Interface: Serializable
 	InspectClass: Serializable
 	 Declaring Class: [N/A]
 	 Super-Class: [N/A]
+	 Constructor: [N/A]
  Interface: Runnable
 	InspectClass: Runnable
 	 Declaring Class: [N/A]
 	 Super-Class: [N/A]
+	 Constructor: [N/A]
+ Constructor: public ClassA()
+ Constructor: public ClassA(int)
 ======================================================

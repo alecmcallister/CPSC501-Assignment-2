@@ -15,6 +15,9 @@ InspectClass: ClassB
 			InspectClass: Object
 			 Declaring Class: [N/A]
 			 Super-Class: [N/A]
+			 Constructor: public java.lang.Object()
+		 Constructor: public ClassD()
+		 Constructor: public ClassD(int)
 	 Interface: InterfaceA
 		InspectClass: InterfaceA
 		 Declaring Class: [N/A]
@@ -23,8 +26,14 @@ InspectClass: ClassB
 			InspectClass: InterfaceB
 			 Declaring Class: [N/A]
 			 Super-Class: [N/A]
+			 Constructor: [N/A]
+		 Constructor: [N/A]
+	 Constructor: public ClassC()
+	 Constructor: public ClassC(int, int)
  Interface: Runnable
 	InspectClass: Runnable
 	 Declaring Class: [N/A]
 	 Super-Class: [N/A]
+	 Constructor: [N/A]
+ Constructor: public ClassB()
 ======================================================

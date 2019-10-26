@@ -9,16 +9,35 @@ InspectClass: String
 	InspectClass: Object
 	 Declaring Class: [N/A]
 	 Super-Class: [N/A]
+	 Constructor: public java.lang.Object()
  Interface: Serializable
 	InspectClass: Serializable
 	 Declaring Class: [N/A]
 	 Super-Class: [N/A]
+	 Constructor: [N/A]
  Interface: Comparable
 	InspectClass: Comparable
 	 Declaring Class: [N/A]
 	 Super-Class: [N/A]
+	 Constructor: [N/A]
  Interface: CharSequence
 	InspectClass: CharSequence
 	 Declaring Class: [N/A]
 	 Super-Class: [N/A]
+	 Constructor: [N/A]
+ Constructor: public java.lang.String(class [B, int, int)
+ Constructor: public java.lang.String(class [B, class java.nio.charset.Charset)
+ Constructor: public java.lang.String(class [B, class java.lang.String)
+ Constructor: public java.lang.String(class [B, int, int, class java.nio.charset.Charset)
+ Constructor: public java.lang.String(class [B, int, int, class java.lang.String)
+ Constructor: public java.lang.String(class java.lang.StringBuilder)
+ Constructor: public java.lang.String(class java.lang.StringBuffer)
+ Constructor: public java.lang.String(class [B)
+ Constructor: public java.lang.String(class [I, int, int)
+ Constructor: public java.lang.String()
+ Constructor: public java.lang.String(class [C)
+ Constructor: public java.lang.String(class java.lang.String)
+ Constructor: public java.lang.String(class [C, int, int)
+ Constructor: public java.lang.String(class [B, int)
+ Constructor: public java.lang.String(class [B, int, int, int)
 ======================================================

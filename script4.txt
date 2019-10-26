@@ -9,4 +9,7 @@ InspectClass: ClassD
 	InspectClass: Object
 	 Declaring Class: [N/A]
 	 Super-Class: [N/A]
+	 Constructor: public java.lang.Object()
+ Constructor: public ClassD()
+ Constructor: public ClassD(int)
 ======================================================

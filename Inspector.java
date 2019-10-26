@@ -16,6 +16,8 @@ public class Inspector {
 		printSuperClass(c, recursive, depth);
 
 		printInterface(c, recursive, depth);
+
+		printConstructors(c, recursive, depth);
 	}
 
 	private void printDeclaringClass(Class c, boolean recursive, int depth) {
@@ -37,9 +39,34 @@ public class Inspector {
 		}
 	}
 
+	private void printConstructors(Class c, boolean recursive, int depth) {
+		if (c.getConstructors().length == 0)
+			println(getIndent(depth) + " Constructor: [N/A]");
+			
+		for (Constructor con : c.getConstructors()) {
+			println(getIndent(depth) + " " + getConstructorInfo(con));
+		}
+	}
+
 	private String getClassName(Class c) {
 		// May want to change to descriptive name at some point
 		return (c != null) ? c.getSimpleName() : "[N/A]";
+	}
+
+	private String getConstructorInfo(Constructor con) {
+		String result = "Constructor: ";
+
+		result += Modifier.toString(con.getModifiers());
+		result += " " + con.getName() + "(";
+
+		for (int i = 0; i < con.getParameterCount(); i++) {
+			Parameter p = con.getParameters()[i];
+			result += p.getType() + ((i + 1 == con.getParameterCount()) ? "" : ", ");
+		}
+
+		result += ")";
+
+		return result;
 	}
 
 	private String getIndent(int depth) {

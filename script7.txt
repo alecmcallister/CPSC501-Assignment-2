@@ -9,12 +9,16 @@ InspectClass: ClassB[][]
 	InspectClass: Object
 	 Declaring Class: [N/A]
 	 Super-Class: [N/A]
+	 Constructor: public java.lang.Object()
  Interface: Cloneable
 	InspectClass: Cloneable
 	 Declaring Class: [N/A]
 	 Super-Class: [N/A]
+	 Constructor: [N/A]
  Interface: Serializable
 	InspectClass: Serializable
 	 Declaring Class: [N/A]
 	 Super-Class: [N/A]
+	 Constructor: [N/A]
+ Constructor: [N/A]
 ======================================================
