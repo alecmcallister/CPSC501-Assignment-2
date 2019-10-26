@@ -16,30 +16,32 @@ InspectClass: ClassB
 			 Declaring Class: [N/A]
 			 Super-Class: [N/A]
 			 Constructors: 
-			 public java.lang.Object()
-
+			 - public java.lang.Object()
 			 Declared Methods: 
-			 protected void finalize() throws Throwable
-			 public final void wait() throws InterruptedException
-			 public final void wait(long, int) throws InterruptedException
-			 public final native void wait(long) throws InterruptedException
-			 public boolean equals(Object)
-			 public String toString()
-			 public native int hashCode()
-			 public final native Class getClass()
-			 protected native Object clone() throws CloneNotSupportedException
-			 public final native void notify()
-			 public final native void notifyAll()
-			 private static native void registerNatives()
-
+			 - protected void finalize() throws Throwable
+			 - public final void wait() throws InterruptedException
+			 - public final void wait(long, int) throws InterruptedException
+			 - public final native void wait(long) throws InterruptedException
+			 - public boolean equals(Object)
+			 - public String toString()
+			 - public native int hashCode()
+			 - public final native Class getClass()
+			 - protected native Object clone() throws CloneNotSupportedException
+			 - public final native void notify()
+			 - public final native void notifyAll()
+			 - private static native void registerNatives()
+			 Declared Fields: [N/A]
 		 Constructors: 
-		 public ClassD()
-		 public ClassD(int)
-
+		 - public ClassD()
+		 - public ClassD(int)
 		 Declared Methods: 
-		 public String toString()
-		 public int getVal3()
-
+		 - public String toString()
+		 - public int getVal3()
+		 Declared Fields: 
+		 - private ClassA val = ClassA@5c647e05
+		 - private static ClassA val2 = null
+		 - private int val3 = 34
+		 - private ClassA[] vallarray = ClassA[]@55f96302 [null, null, null, null, null, null, null, null, null, null]
 	 Interface: InterfaceA
 		InspectClass: InterfaceA
 		 Declaring Class: [N/A]
@@ -50,39 +52,43 @@ InspectClass: ClassB
 			 Super-Class: [N/A]
 			 Constructors: [N/A]
 			 Declared Methods: 
-			 public abstract void func0(int, boolean) throws Exception
-
+			 - public abstract void func0(int, boolean) throws Exception
+			 Declared Fields: [N/A]
 		 Constructors: [N/A]
 		 Declared Methods: 
-		 public abstract void func1(int, double, boolean, String) throws Exception
-		 public abstract int func2(String) throws Exception, ArithmeticException, IllegalMonitorStateException
-
+		 - public abstract void func1(int, double, boolean, String) throws Exception
+		 - public abstract int func2(String) throws Exception, ArithmeticException, IllegalMonitorStateException
+		 Declared Fields: [N/A]
 	 Constructors: 
-	 public ClassC()
-	 public ClassC(int, int)
-
+	 - public ClassC()
+	 - public ClassC(int, int)
 	 Declared Methods: 
-	 public void run()
-	 public String toString()
-	 public void func1(int, double, boolean, String) throws Exception
-	 public int func2(String) throws Exception, ArithmeticException, IllegalMonitorStateException
-	 public void func0(int, boolean) throws Exception
-	 public abstract void func3(int)
-
+	 - public void run()
+	 - public String toString()
+	 - public void func1(int, double, boolean, String) throws Exception
+	 - public abstract void func3(int)
+	 - public int func2(String) throws Exception, ArithmeticException, IllegalMonitorStateException
+	 - public void func0(int, boolean) throws Exception
+	 Declared Fields: 
+	 - private ClassA val2 = ClassA@6bc7c054
+	 - private ClassA val3 = ClassA@232204a1
+	 - private ClassA val4 = ClassA@4aa298b7
  Interface: Runnable
 	InspectClass: Runnable
 	 Declaring Class: [N/A]
 	 Super-Class: [N/A]
 	 Constructors: [N/A]
 	 Declared Methods: 
-	 public abstract void run()
-
+	 - public abstract void run()
+	 Declared Fields: [N/A]
  Constructors: 
- public ClassB()
-
+ - public ClassB()
  Declared Methods: 
- public void run()
- public String toString()
- public void func3(int)
-
+ - public void run()
+ - public String toString()
+ - public void func3(int)
+ Declared Fields: 
+ - private ClassA val = ClassA@28d93b30
+ - private ClassA val2 = ClassA@1b6d3586
+ - private ClassA val3 = null
 ======================================================

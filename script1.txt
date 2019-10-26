@@ -10,45 +10,47 @@ InspectClass: ClassA
 	 Declaring Class: [N/A]
 	 Super-Class: [N/A]
 	 Constructors: 
-	 public java.lang.Object()
-
+	 - public java.lang.Object()
 	 Declared Methods: 
-	 protected void finalize() throws Throwable
-	 public final void wait() throws InterruptedException
-	 public final void wait(long, int) throws InterruptedException
-	 public final native void wait(long) throws InterruptedException
-	 public boolean equals(Object)
-	 public String toString()
-	 public native int hashCode()
-	 public final native Class getClass()
-	 protected native Object clone() throws CloneNotSupportedException
-	 public final native void notify()
-	 public final native void notifyAll()
-	 private static native void registerNatives()
-
+	 - protected void finalize() throws Throwable
+	 - public final void wait() throws InterruptedException
+	 - public final void wait(long, int) throws InterruptedException
+	 - public final native void wait(long) throws InterruptedException
+	 - public boolean equals(Object)
+	 - public String toString()
+	 - public native int hashCode()
+	 - public final native Class getClass()
+	 - protected native Object clone() throws CloneNotSupportedException
+	 - public final native void notify()
+	 - public final native void notifyAll()
+	 - private static native void registerNatives()
+	 Declared Fields: [N/A]
  Interface: Serializable
 	InspectClass: Serializable
 	 Declaring Class: [N/A]
 	 Super-Class: [N/A]
 	 Constructors: [N/A]
 	 Declared Methods: [N/A]
+	 Declared Fields: [N/A]
  Interface: Runnable
 	InspectClass: Runnable
 	 Declaring Class: [N/A]
 	 Super-Class: [N/A]
 	 Constructors: [N/A]
 	 Declared Methods: 
-	 public abstract void run()
-
+	 - public abstract void run()
+	 Declared Fields: [N/A]
  Constructors: 
- public ClassA()
- public ClassA(int)
-
+ - public ClassA()
+ - public ClassA(int)
  Declared Methods: 
- public void run()
- public String toString()
- public void setVal(int) throws Exception
- public int getVal()
- private void printSomething()
-
+ - public void run()
+ - public String toString()
+ - public void setVal(int) throws Exception
+ - public int getVal()
+ - private void printSomething()
+ Declared Fields: 
+ - private int val = 3
+ - private double val2 = 0.2
+ - private boolean val3 = true
 ======================================================
