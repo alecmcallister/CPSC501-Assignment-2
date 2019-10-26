@@ -88,14 +88,8 @@ public class Inspector {
 		String result = " - ";
 
 		result += Modifier.toString(con.getModifiers());
-		result += " " + con.getName() + "(";
-
-		for (int i = 0; i < con.getParameterCount(); i++) {
-			Parameter p = con.getParameters()[i];
-			result += getClassName(p.getType()) + ((i + 1 == con.getParameterCount()) ? "" : ", ");
-		}
-
-		result += ")";
+		result += " " + con.getName();
+		result += "(" + separateListWithCommas(con.getParameterTypes()) + ")";
 
 		return result;
 	}
@@ -116,23 +110,11 @@ public class Inspector {
 
 		result += Modifier.toString(m.getModifiers());
 		result += " " + getClassName(m.getReturnType());
-		result += " " + m.getName() + "(";
+		result += " " + m.getName();
+		result += "(" + separateListWithCommas(m.getParameterTypes()) + ")";
 
-		for (int i = 0; i < m.getParameterCount(); i++) {
-			Parameter p = m.getParameters()[i];
-			result += getClassName(p.getType()) + (i + 1 == m.getParameterCount() ? "" : ", ");
-		}
-
-		result += ")";
-
-		if (m.getExceptionTypes().length > 0) {
-			result += " throws ";
-
-			for (int i = 0; i < m.getExceptionTypes().length; i++) {
-				Class e = m.getExceptionTypes()[i];
-				result += getClassName(e) + (i + 1 == m.getExceptionTypes().length ? "" : ", ");
-			}
-		}
+		if (m.getExceptionTypes().length > 0)
+			result += " throws " + separateListWithCommas(m.getExceptionTypes());
 
 		return result;
 	}
@@ -187,6 +169,7 @@ public class Inspector {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+
 		return value;
 	}
 
@@ -200,6 +183,7 @@ public class Inspector {
 		String indent = "";
 		for (int i = 0; i < depth; i++)
 			indent += "\t";
+
 		return indent;
 	}
 
@@ -208,20 +192,24 @@ public class Inspector {
 			return "";
 
 		String result = "(Length: " + Array.getLength(a) + ") [";
-		for (int i = 0; i < Array.getLength(a); i++) {
+		for (int i = 0; i < Array.getLength(a); i++)
 			result += Array.get(a, i) + (i + 1 < Array.getLength(a) ? ", " : "");
-		}
+
 		result += "]";
+
+		return result;
+	}
+
+	private String separateListWithCommas(Class[] list) {
+		String result = "";
+		for (int i = 0; i < list.length; i++)
+			result += getClassName(list[i]) + (i + 1 == list.length ? "" : ", ");
 
 		return result;
 	}
 
 	private String getIdentityHash(Object o) {
 		return getClassName(o.getClass()) + "@" + Integer.toHexString(o.hashCode());
-	}
-
-	private void print(Object arg) {
-		System.out.print(arg);
 	}
 
 	private void println(Object arg) {

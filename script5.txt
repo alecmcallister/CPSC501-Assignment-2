@@ -87,8 +87,8 @@ ClassD
 	 - public void run()
 	 - public java.lang.String toString()
 	 - public void setVal(int) throws java.lang.Exception
-	 - public int getVal()
 	 - private void printSomething()
+	 - public int getVal()
 	 Declared Fields: 
 	 - private int val = 17
 	 - private double val2 = 0.2
